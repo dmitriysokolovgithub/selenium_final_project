@@ -2,7 +2,6 @@ from .base_page import BasePage
 from .locators import ProductPageLocators
 from selenium.common.exceptions import NoAlertPresentException # в начале файла
 import math
-import time
 
 
 class ProductPage(BasePage):
@@ -19,7 +18,6 @@ class ProductPage(BasePage):
         answer = str(math.log(abs((12 * math.sin(float(x))))))
         alert.send_keys(answer)
         alert.accept()
-        #time.sleep(60*10)
         try:
             alert = self.browser.switch_to.alert
             alert_text = alert.text
@@ -35,3 +33,11 @@ class ProductPage(BasePage):
     def should_be_correct_sum(self):
         assert self.are_elements_text_equal(ProductPageLocators.CART_SUM_FROM_ALERT,
                                             ProductPageLocators.CART_SUM_FROM_CART), "prices aren't equal"
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.CART_SUCCESS_ALERT), \
+            "Success message is presented, but should not be"
+
+    def should_be_disappeared(self):
+        assert self.is_disappeared(*ProductPageLocators.CART_SUCCESS_ALERT), \
+            "Success message is disappeared"

@@ -17,3 +17,9 @@ class ProductPageLocators:
                            "//div[@class='alert alert-safe alert-noicon alert-info  fade in']/div/p/strong")
     TITLE_FROM_CART = (By.XPATH, "//h1")
     CART_SUM_FROM_CART = (By.XPATH, "//div[@class='col-sm-6 product_main']/p[1]")
+    CART_SUCCESS_ALERT = (By.XPATH, "//div[@class='alert alert-safe alert-noicon alert-success  fade in']")
+
+
+class BasePageLocators:
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
