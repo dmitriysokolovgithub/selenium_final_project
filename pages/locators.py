@@ -5,6 +5,13 @@ class MainPageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
 
 
+class BasketPageLocators:
+    TOP_BASKET_LINK = (By.CSS_SELECTOR, ".btn-group a.btn-default")
+    BASKET_PRODUCTS = (By.CSS_SELECTOR, ".basket-items")
+    RU_BASKET_EMPTY_TEXT = (By.XPATH,
+                            "//div[@class='content']/*/p[contains(text(), 'Ваша корзина пуста')]")
+
+
 class LoginPageLocators:
     LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
     REGISTER_FORM = (By.CSS_SELECTOR, "#register_form")
