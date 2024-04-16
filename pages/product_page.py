@@ -41,3 +41,5 @@ class ProductPage(BasePage):
     def should_be_disappeared(self):
         assert self.is_disappeared(*ProductPageLocators.CART_SUCCESS_ALERT), \
             "Success message is disappeared"
+
+
