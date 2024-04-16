@@ -1,4 +1,2 @@
 # selenium_final_project
-final project for a course dedicated to autotesting
-
-Этот репозиторий содержит последнее тестовое задание для курса "Автоматизация тестирования с помощью Selenium и Python" на Stepik
+This repository contains the final test assignment for the "Automated Testing with Selenium and Python" course on Stepik.
